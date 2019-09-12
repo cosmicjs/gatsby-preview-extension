@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import { Button, Icon } from 'semantic-ui-react'
+import 'semantic-ui-css/semantic.min.css'
+import gatsby from './gatsby.svg'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  handleClick = () => {
+    var url_string = window.location.href
+    var url = new URL(url_string);
+    var preview_url = url.searchParams.get('preview_url');
+    var object_slug = url.searchParams.get('object_slug');
+    window.open(preview_url + '/' + object_slug)
+  }
+  render() {
+    return (
+      <div style={{ textAlign: 'center', width: 200, paddingTop: 10 }}>
+        <div style={{marginBottom: 10 }}>
+          <Button onClick={this.handleClick} primary style={{ width: 200, background: '#00AFD7' }}>Preview&nbsp;&nbsp;&nbsp;&nbsp;<Icon name='external alternate' /></Button>
+        </div>
+        <div style={{marginBottom: 10 }}>
+          <div style={{ float: 'left', marginLeft: 40, marginTop: 5 }}>Powered by:</div>
+          <div style={{ float: 'left', marginLeft: 10 }}><img src={gatsby} style={{ width: 30 }}/></div>
+        </div>
+      </div>
+    );
+  }
 }
-
-export default App;
