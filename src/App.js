@@ -16,7 +16,7 @@ export default class App extends Component {
   }
   render() {
     return (
-      <div style={{ textAlign: 'center', width: 200, paddingTop: 10 }}>
+      <div style={{ textAlign: 'center', width: 200, paddingTop: 5 }}>
         <div style={{marginBottom: 12 }}>
           <Button onClick={this.handleClick} primary style={{ width: 200, background: '#00AFD7' }}>Preview&nbsp;&nbsp;&nbsp;&nbsp;<Icon name='external alternate' /></Button>
         </div>

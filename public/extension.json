@@ -1,0 +1,9 @@
+{
+  "title": "Gatsby Preview",
+  "dispay_options": [
+    {
+      "location": "object_sidebar",
+      "iframe_height": 100
+    }
+  ]
+}
