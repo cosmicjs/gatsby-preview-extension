@@ -1,9 +1,15 @@
 {
   "title": "Gatsby Preview",
-  "dispay_options": [
+  "font_awesome_class": "fa-puzzle-piece",
+  "image_url": "https://this-is-your-thumbnail-url.xyz",
+  "query_params": [
     {
-      "location": "object_sidebar",
-      "iframe_height": 100
+      "key": "preview_url",
+      "value": ""
+    },{
+      "key": "auth_token",
+      "value": ""
     }
-  ]
+  ],
+  "repo_url": "https://github.com/cosmicjs/gatsby-preview-extension"
 }
