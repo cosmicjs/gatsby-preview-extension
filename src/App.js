@@ -1,33 +1,25 @@
 import React, { useState, useEffect } from 'react';
-import {
-  ExtensionUI,
-  getContentPath
-} from '@gatsby-cloud-pkg/gatsby-cms-extension-base';
+import { ExtensionUI } from '@gatsby-cloud-pkg/gatsby-cms-extension-base';
+import './App.css';
 
 function App() {
   const [contentSlug, putContentSlug] = useState('');
   const [previewUrl, putPreviewUrl] = useState('');
-  const [previewContentUrl, putPreviewContentUrl] = useState('');
+  const [authToken, putAuthToken] = useState('');
 
   useEffect(() => {
     const url = new URL(window.location.href);
     putContentSlug(url.searchParams.get('object_slug') || '');
     putPreviewUrl(url.searchParams.get('preview_url') || '');
-    async function fetchContentPath(payload) {
-      try {
-        const finalPreviewURl = await getContentPath(payload);
-        putPreviewContentUrl(finalPreviewURl | '');
-      } catch (e) {
-        putPreviewContentUrl('');
-      }
-    }
-    if (contentSlug && previewUrl) {
-      fetchContentPath({ contentSlug, previewUrl, authToken: '' });
-    }
-  }, [contentSlug, previewUrl]);
+    putAuthToken(url.searchParams.get('auth_token') || '');
+  }, []);
 
   return (
-    <>{previewContentUrl && <ExtensionUI previewUrl={previewContentUrl} />}</>
+    <ExtensionUI
+      contentSlug={contentSlug}
+      previewUrl={previewUrl}
+      authToken={authToken}
+    />
   );
 }
 
