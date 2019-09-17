@@ -1,0 +1,6 @@
+.preview-button:focus {
+  outline: none;
+}
+.powered-by > p {
+  margin-top: 0;
+}
