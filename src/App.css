@@ -3,4 +3,9 @@
 }
 .powered-by > p {
   margin-top: 0;
+  font-size: 13px;
+}
+.powered-by > svg {
+  height: 35px;
+  width: 35px;
 }
