@@ -6,6 +6,10 @@
     {
       "key": "preview_url",
       "value": ""
+    },
+    {
+      "key": "auth_token",
+      "value": ""
     }
   ],
   "display_options": {
