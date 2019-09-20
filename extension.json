@@ -1,0 +1,19 @@
+{
+  "title": "Gatsby Preview",
+  "font_awesome_class": "fa-eye",
+  "image_url": "https://www.gatsbyjs.org/Gatsby-Logo.svg",
+  "query_params": [
+    {
+      "key": "preview_url",
+      "value": ""
+    }
+  ],
+  "display_options": {
+    "edit_object_page": [
+      {
+        "location": "below_publish_options",
+        "widget_height": 95
+      }
+    ]
+  }
+}
