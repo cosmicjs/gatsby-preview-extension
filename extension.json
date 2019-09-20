@@ -2,6 +2,7 @@
   "title": "Gatsby Preview",
   "font_awesome_class": "fa-eye",
   "image_url": "https://www.gatsbyjs.org/Gatsby-Logo.svg",
+  "repo_url": "https://github.com/cosmicjs/gatsby-preview-extension",
   "query_params": [
     {
       "key": "preview_url",
