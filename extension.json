@@ -15,6 +15,9 @@
         "location": "below_publish_options",
         "widget_height": 95
       }
+    ],
+    "object_types": [
+      "posts"
     ]
   }
 }
