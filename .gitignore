@@ -22,5 +22,4 @@ build.zip
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-extension.zip
 package-lock.json
